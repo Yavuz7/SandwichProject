@@ -1,22 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <>
       <View style={styles.title}>
-        <Text style={{ fontSize: 25 }}>Sandwiches!</Text>
+        <Text
+          style={{ fontSize: 25, borderBottomWidth: 5, alignSelf: "center" }}
+        >
+          Sandwich Shaker!
+        </Text>
+        <Text style={{ fontSize: 15, alignSelf: "center" }}>
+          Your Sandwiches
+        </Text>
       </View>
-      <View style={styles.heading}>
-        <View style={styles.headingText}>
-          <Text>Hello Apple</Text>
-        </View>
-        <View style={styles.headingText}>
-          <Text>Eggplant</Text>
-        </View>
-        <View style={styles.headingText}>
-          <Text>Hello Apple</Text>
-        </View>
-      </View>
+      {props.children}
     </>
   );
 }
@@ -24,20 +21,15 @@ export default function Header() {
 const styles = StyleSheet.create({
   heading: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-between",
-
-    backgroundColor: "#ffebcd",
-  },
-  headingText: {
-    flex: 1,
-    alignItems: "center",
-    alignSelf: "flex-start",
-    backgroundColor: "#fff",
-    paddingVertical: "6%",
   },
   title: {
-    paddingVertical: "8%",
+    height: "15%",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    width: "100%",
+    borderBottomWidth: 2,
   },
 });
