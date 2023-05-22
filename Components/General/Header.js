@@ -4,16 +4,11 @@ export default function Header(props) {
   return (
     <>
       <View style={styles.title}>
-        <Text
-          style={{ fontSize: 25, borderBottomWidth: 5, alignSelf: "center" }}
-        >
+        <Text style={{ fontSize: 25, borderBottomWidth: 5 }}>
           Sandwich Shaker!
         </Text>
-        <Text style={{ fontSize: 15, alignSelf: "center" }}>
-          Your Sandwiches
-        </Text>
+        <Text style={{ fontSize: 15 }}>Your Sandwiches</Text>
       </View>
-      {props.children}
     </>
   );
 }
@@ -23,13 +18,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
   },
   title: {
-    height: "15%",
-    alignItems: "center",
+    alignSelf: "center",
     backgroundColor: "#fff",
-    justifyContent: "center",
-    width: "100%",
-    borderBottomWidth: 2,
   },
 });
